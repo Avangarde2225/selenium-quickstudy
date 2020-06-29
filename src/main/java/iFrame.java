@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,6 +14,15 @@ public class iFrame {
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        driver.switchTo().frame(0);
+
+        driver.findElement(By.xpath("//p")).sendKeys("bla bla");
+
+        driver.switchTo().defaultContent();
+
+        System.out.println(driver.findElement(By.xpath("//h3)")).getText());
+
 
 
     }
