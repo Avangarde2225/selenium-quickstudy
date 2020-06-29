@@ -26,5 +26,7 @@ public class handleWindow {
 
         driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys("blabla@gmail.com");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
+
+        driver.quit();
     }
 }
